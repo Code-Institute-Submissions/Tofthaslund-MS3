@@ -2,5 +2,58 @@
 {% block content %}
 
 
-<div class="row happy"></div>
+<div class="row happy">
+    <div class="row">
+        <img src="{{ url_for('static', filename='photo-by-ann-danilina-on-unsplash.jpg') }}" alt="family">
+    </div>
+    <div class="row headline-text">
+        <h2>Plan your life</h2>
+        <p>and get time for whats really matters</p>
+    </div>
+</div>
+
+<div class="row col-sm-12 col-md-12">
+    <h3>We offer different of subscriptions to fit into your style</h3>
+    <div class="card" style="width: 25%;">
+        <div class="card-body">
+          <h5 class="card-title">Personal account</h5>
+          <h6 class="card-subtitle mb-2 text-muted">For 1 person</h6>
+          <p class="card-text">
+              Create unlimted tasks
+              <br>
+              Access your account on Desktop, Tablet or Mobile 
+              <br>
+              Delete and update your tasks
+          </p>
+          <a href="#" class="card-link">Sign Up</a>
+          <a href="#" class="card-link">£5 per month</a>
+        </div>
+      </div>
+      <div class="card" style="width: 25%;">
+        <div class="card-body">
+          <h5 class="card-title">family account</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Up to 4 people</h6>
+          <p class="card-text">
+              Same as Personal account
+              <br>
+              See who has created what
+              <br>
+              Get one admin account to delete all tasks
+          </p>
+          <a href="#" class="card-link">Sign Up</a>
+          <a href="#" class="card-link">£15 per month</a>
+        </div>
+      </div>
+      <div class="card" style="width: 25%;">
+        <div class="card-body">
+          <h5 class="card-title">Add extra person</h5>
+          <h6 class="card-subtitle mb-2 text-muted">For 1 person</h6>
+          <p class="card-text">
+              If needed you can always another person to your plan
+          </p>
+          <a href="#" class="card-link">Sign Up</a>
+          <a href="#" class="card-link">£2,5 per month</a>
+        </div>
+      </div>
+</div>
 {% endblock %}

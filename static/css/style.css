@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.headline-text{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+
+.card{
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+    margin-left: 5%;
+}
+
+.card-link{
+    font-weight: bolder;
+}
