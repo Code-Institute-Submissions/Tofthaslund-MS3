@@ -1,8 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.headline-text{
+*{
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
+}
+
+/* headline and image  */
+
+.family img{
+    height: auto;
+    width: 100%;
+}
+
+.front-text{
+    padding: 70px 0;
+    text-align: center;
+    color: #006994;
+}
+
+.front-text h1{
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+.front-text p{
+    font-size: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* subscription overview */
+
+.overview{
+    margin-top: 5%;
+}
+
+.overview h3{
+    margin-bottom: 2%;
 }
 
 
@@ -16,4 +50,10 @@
 
 .card-link{
     font-weight: bolder;
+}
+
+.about{
+    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+   margin-top: 5%;
+   margin-bottom: 5%;
 }

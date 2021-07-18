@@ -2,17 +2,19 @@
 {% block content %}
 
 
-<div class="row happy">
+<div class="container">
     <div class="row">
-        <img src="{{ url_for('static', filename='photo-by-ann-danilina-on-unsplash.jpg') }}" alt="family">
-    </div>
-    <div class="row headline-text">
-        <h2>Plan your life</h2>
-        <p>and get time for whats really matters</p>
+        <div class="col-md-8">
+            <img src="{{ url_for('static', filename='image/photo-by-ann-danilina-on-unsplash.jpg')}}" alt="family">
+        </div>
+        <div class="col-md-4 front-text">
+            <h1>Plan your life</h1>
+            <p>And get time for what really matters</p>
+        </div>
     </div>
 </div>
 
-<div class="row col-sm-12 col-md-12">
+<div class="row col-sm-12 col-md-12 text-center overview">
     <h3>We offer different of subscriptions to fit into your style</h3>
     <div class="card" style="width: 25%;">
         <div class="card-body">
@@ -55,5 +57,14 @@
           <a href="#" class="card-link">£2,5 per month</a>
         </div>
       </div>
+</div>
+
+<div class="col-md-6 col-sm-6 about text-center offset-md-3">
+    <h4>What is planner.io?</h4>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, temporibus assumenda a iure accusamus magnam praesentium perferendis voluptatibus, 
+        quos totam autem neque facilis mollitia incidunt inventore reprehenderit, hic repellendus adipisci maiores porro! Exercitationem illum sint esse rerum. 
+        Libero quam commodi deserunt laborum nam dolor atque cupiditate, veritatis magnam dolore quos.
+    </p>
 </div>
 {% endblock %}
