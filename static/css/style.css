@@ -2,31 +2,47 @@
 
 *{
     font-family: 'Roboto', sans-serif;
-    text-transform: capitalize;
+    text-transform: capitalize;   
+}
+
+.top{
+    background-color: #5cdb95;
 }
 
 /* headline and image  */
 
-.family img{
+main{
+    background-color: #5cdb95;
+    color: #edf5e1;
+}
+
+img{
+    margin-left: -20%;
     height: auto;
     width: 100%;
+    border-radius: 20px;
+    margin-top: 5%;
 }
 
 .front-text{
     padding: 70px 0;
     text-align: center;
-    color: #006994;
+    
+    
 }
 
 .front-text h1{
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: lighter;
+    margin-bottom: 50%;
+
 }
 
 .front-text p{
     font-size: 2rem;
     font-weight: lighter;
     font-style: italic;
+    
 }
 
 /* subscription overview */
@@ -39,28 +55,33 @@
     margin-bottom: 2%;
 }
 
+.card{
+    background-color: #379683;
+    box-shadow: 5px 5px 5px 5px #379683;
+}
+
 
 .price{
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
     font-weight: bold;
-    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+    box-shadow: #8ee4af;
     margin-left: 5%;
 }
 
 
 .card-link-1{
-    background-color: #006994;
+    background-color: #05386b;
     padding: 5% 5% 5% 5%;
     margin: 3%;
     text-decoration: none;
-    color: #fff;
+    color: #edf5e1;
     border-radius: 15px;
 }
 
 .card-link-1:hover{
-    background-color: rgb(212, 212, 212);
-    color: #006994;
+    background-color: #edf5e1;
+    color: #05386b;
 }
 
 .card-link{
@@ -68,19 +89,44 @@
 }
 
 .about{
-    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+    box-shadow: 5px 5px 5px 5px #379683;
    margin-top: 5%;
    margin-bottom: 5%;
+   border-radius: 15px;
 }
 
 
 /* reviews */
 
 .review{
-    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+    box-shadow: 5px 5px 5px 5px #379683;
     margin-bottom: 2%;
 }
 
 .reviews{
     display: inline-block;
+}
+
+
+/* footer */
+
+footer{
+    background-color: #edf5e1;
+    color: #05386b;
+}
+
+.social-media {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.social-media li{
+    display: inline-block;
+    font-size: 2.5rem;
+    padding-left: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.social-media li a{
+    color: #05386b;
 }
