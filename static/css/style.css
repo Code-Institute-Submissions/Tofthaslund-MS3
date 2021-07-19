@@ -40,12 +40,27 @@
 }
 
 
-.card{
+.price{
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
     font-weight: bold;
     box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
     margin-left: 5%;
+}
+
+
+.card-link-1{
+    background-color: #006994;
+    padding: 5% 5% 5% 5%;
+    margin: 3%;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.card-link-1:hover{
+    background-color: rgb(212, 212, 212);
+    color: #006994;
 }
 
 .card-link{
@@ -56,4 +71,16 @@
     box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
    margin-top: 5%;
    margin-bottom: 5%;
+}
+
+
+/* reviews */
+
+.review{
+    box-shadow: 5px 5px 5px 5px rgb(155, 154, 154);
+    margin-bottom: 2%;
+}
+
+.reviews{
+    display: inline-block;
 }
