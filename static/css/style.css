@@ -6,14 +6,14 @@
 }
 
 .top{
-    background-color: #5cdb95;
+    background-color: #efefef;
 }
 
 /* headline and image  */
 
 main{
-    background-color: #5cdb95;
-    color: #edf5e1;
+    background-color: #efefef;
+    color: #a9a9a9;
 }
 
 img{
@@ -58,6 +58,7 @@ img{
 .card{
     background-color: #379683;
     box-shadow: 5px 5px 5px 5px #379683;
+    color: #efefef;
 }
 
 
@@ -89,10 +90,11 @@ img{
 }
 
 .about{
-    box-shadow: 5px 5px 5px 5px #379683;
+    box-shadow: 5px 5px 5px 5px #FF476F;;
    margin-top: 5%;
    margin-bottom: 5%;
    border-radius: 15px;
+   color: #FF476F;
 }
 
 
@@ -108,11 +110,36 @@ img{
 }
 
 
+
+/* signup form */
+
+.main-div{
+    height: 80vh;
+}
+
+
+.form-control {
+	height: 40px;
+	box-shadow: none;
+	color: #969fa4;
+}
+
+.signup-form {
+	width: 450px;
+	margin: 0 auto;
+	padding: 30px 0;
+  	font-size: 15px;
+    height: 20vh;
+}
+
+
+
+
 /* footer */
 
 footer{
-    background-color: #edf5e1;
-    color: #05386b;
+    background-color: #efefef;
+    color: #FF476F;
 }
 
 .social-media {
@@ -128,5 +155,5 @@ footer{
     cursor: pointer;
 }
 .social-media li a{
-    color: #05386b;
+    color: #FF476F;
 }
