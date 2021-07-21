@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>All Tasks</h3>
+<ul>
+    {% for task in tasks %}
+        <li>
+            <div class="collapsible">
+                <div class="col-sm-3">
+                    {% if session.user|lower == task.created_by|lower %}
+                    <a href="{{ }}" class="">Done</a>
+                    <a href="{{ }}" class="">Edit</a>
+                    {% endif %}
+                </div>
+                <div class="col-sm-9">
+                    <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
+                    {% if task.is_urgent == "on" %}
+                    <i class="fas fa-exclamation-circle light-blue-text text-lighten-2 tooltipped"
+                        data-position="right" data-tooltip="URGENT"></i>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ task.category_name }}</strong>
+                <p>{{ task.task_description }}</p>
+                <p><em>by {{ task.created_by }}</em></p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
