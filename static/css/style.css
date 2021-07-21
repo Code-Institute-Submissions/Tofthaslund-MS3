@@ -158,6 +158,11 @@ button.signup-btn:hover{
     background-color: #FF476F;
 }
 
+.already-acc{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
 
 /* footer */
 
