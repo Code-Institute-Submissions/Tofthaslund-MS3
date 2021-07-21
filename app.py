@@ -1,7 +1,10 @@
 import os
-from flask import Flask
-from flask.templating import render_template
+from flask import (
+    Flask, flash, render_template,
+    redirect, request, session, url_for)
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
+from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
@@ -21,9 +24,33 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/signup")
+@app.route("/signup", methods=["GET", "POST"])
 def signup():
+    if request.method == "POST":
+        # check if username is already taken
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+        
+        if existing_user:
+            flash("Username already taken")
+            return redirect(url_for("signup"))
+
+        signup = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(signup)
+
+        # put the new user into session cookie
+        session["user"] = request.form.get("username").lower()
+        flash("Sign Up complete!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("signup.html")
+
+
+@app.route("/signin")
+def signin():
+    return render_template("signin.html")
 
 
 if __name__ == "__main__":

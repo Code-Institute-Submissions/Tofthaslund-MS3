@@ -113,26 +113,50 @@ img{
 
 /* signup form */
 
-.main-div{
-    height: 80vh;
+.signup-header{
+    margin: auto;
+    width: 50%;
 }
 
-
-.form-control {
-	height: 40px;
-	box-shadow: none;
-	color: #969fa4;
+.card-panel{
+    border: 1px green solid;
+    height: 70vh;
+    margin: auto;
+    width: 50%;
+    box-shadow: 2px 2px 2px 2px;
+    margin-bottom: 5%;
 }
 
-.signup-form {
-	width: 450px;
-	margin: 0 auto;
-	padding: 30px 0;
-  	font-size: 15px;
-    height: 20vh;
+input#username.validate{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    border-radius: 50px;
 }
 
+input#username.validate:hover{
+    color: #FF476F;
+}
 
+input#password.validate{
+    width: 100%;
+    border-radius: 50px;
+}
+
+input#password.validate:hover{
+    color: #FF476F;
+}
+
+button.signup-btn{
+    border-radius: 50px;
+    width: 75%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+button.signup-btn:hover{
+    background-color: #FF476F;
+}
 
 
 /* footer */
