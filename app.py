@@ -25,8 +25,8 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/signup", methods=["GET", "POST"])
-def signup():
+@app.route("/register", methods=["GET", "POST"])
+def register():
     if request.method == "POST":
         # check if username is already taken
         existing_user = mongo.db.users.find_one(
@@ -34,19 +34,19 @@ def signup():
         
         if existing_user:
             flash("Username already taken")
-            return redirect(url_for("signup"))
+            return redirect(url_for("register"))
 
-        signup = {
+        register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
-        mongo.db.users.insert_one(signup)
+        mongo.db.users.insert_one(register)
 
         # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Sign Up complete!")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("signup.html")
+    return render_template("register.html")
 
 
 @app.route("/signin", methods=["GET", "POST"])
