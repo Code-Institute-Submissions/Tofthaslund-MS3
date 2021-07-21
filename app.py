@@ -20,6 +20,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 @app.route("/")
+@app.route("/index")
 def index():
     return render_template("index.html")
 
@@ -74,6 +75,16 @@ def signin():
     return  render_template("signin.html")
     
 
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # grab the sessions user username from the DB
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+
+    if session["user"]:
+        return render_template("profile.html", username=username)
+    
+    return redirect(url_for("signin"))
 
 
 if __name__ == "__main__":
