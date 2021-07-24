@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="signup-header">Sign Up</h3>
+
+<h3 class="signup-header">Register</h3>
 <div class="row">
-    <form class="col-md-12 col-sm-12" action="{{ url_for('signup') }}">
+    <form class="col-md-12 col-sm-12" action="{{ url_for('register') }}">
         <div class="card-panel">
             <!-- username here  -->
             <div class="row name">
@@ -24,11 +25,8 @@
             <!-- signup button -->
             <div class="row">
                 <button class="signup-btn" type="submit">
-                    Sign Up
+                    Sign In
                 </button>
-            </div>
-            <div class="row already-acc">
-                <h6>Already have an <a href="{{ url_for('signin') }}">Account?</a></h6>
             </div>
         </div>
     </form>
