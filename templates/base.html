@@ -12,6 +12,7 @@
     <title>Personal Planner</title>
 </head>
 <body>
+  <header>
     <nav class="navbar top navbar-expand-lg navbar-light ">
         <div class="container-fluid">
           <a class="navbar-brand" href="{{ url_for('index') }}">Planner.io</a>
@@ -36,6 +37,20 @@
           </div>
         </div>
       </nav>
+  </header>
+
+  <section>
+    <!-- flash messages -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+            <div class="row flashes">
+                <h4>{{ message }}</h4>
+            </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </section>
 
     <main>
     {% block content %}

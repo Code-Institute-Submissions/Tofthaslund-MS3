@@ -5,6 +5,10 @@
     text-transform: capitalize;   
 }
 
+.flashes h4 {
+    line-height: 2;
+}
+
 .top{
     background-color: #efefef;
 }
@@ -129,6 +133,7 @@ img{
 
 input#username.validate{
     width: 100%;
+    height: 50px;
     margin-top: 5%;
     margin-bottom: 2%;
     border-radius: 50px;
@@ -141,6 +146,7 @@ input#username.validate:hover{
 input#password.validate{
     width: 100%;
     border-radius: 50px;
+    height: 50px;
 }
 
 input#password.validate:hover{

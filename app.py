@@ -22,7 +22,8 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    tasks = mongo.db.tasks.find()
+    return render_template("index.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -31,7 +32,7 @@ def register():
         # check if username is already taken
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             flash("Username already taken")
             return redirect(url_for("register"))
