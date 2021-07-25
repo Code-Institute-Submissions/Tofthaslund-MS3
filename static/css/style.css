@@ -117,13 +117,16 @@ img{
 
 /* signup form */
 
+.register-main{
+    background-image: url('/static/image/nootbook.jpg');
+}
+
 .signup-header{
     margin: auto;
     width: 50%;
 }
 
 .card-panel{
-    border: 1px green solid;
     height: 70vh;
     margin: auto;
     width: 50%;
@@ -131,22 +134,41 @@ img{
     margin-bottom: 5%;
 }
 
+.name{
+    text-align: center;
+}
+
+
+.name i{
+    font-size: larger;
+    color: #FF476F;
+    
+}
+
 input#username.validate{
-    width: 100%;
-    height: 50px;
+    width: 75%;
+    height: 40px;
     margin-top: 5%;
     margin-bottom: 2%;
-    border-radius: 50px;
 }
 
 input#username.validate:hover{
     color: #FF476F;
 }
 
+.password{
+    text-align: center;
+}
+
+.password i{
+    font-size: larger;
+    color: #FF476F;
+    padding: 2px 2px 2px 2px;
+}
+
 input#password.validate{
-    width: 100%;
-    border-radius: 50px;
-    height: 50px;
+    width: 75%;
+    height: 40px;
 }
 
 input#password.validate:hover{
@@ -168,6 +190,15 @@ button.signup-btn:hover{
     margin: auto;
     width: 50%;
     text-align: center;
+}
+
+/* sign In */
+.signin-main{
+    background-image: url('/static/image/nootbook.jpg');
+}
+
+.input-field{
+    align-items: center;
 }
 
 /* footer */

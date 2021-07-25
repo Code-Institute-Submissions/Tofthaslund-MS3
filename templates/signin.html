@@ -1,35 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<h3 class="signup-header">Register</h3>
-<div class="row">
-    <form class="col-md-12 col-sm-12" method="GET" action="{{ url_for('register') }}">
-        <div class="card-panel">
-            <!-- username here  -->
-            <div class="row name">
-                <div class="input-field col-md-12">
-                    <input type="text" id="username" name="username" minlength="4"
-                    maxlength="20" class="validate" placeholder="User Name" required>
-                    <label for="username"></label>
+<div class="signin-main">
+    <h3 class="signup-header">Sign In</h3>
+    <div class="row">
+        <form class="col-md-12 col-sm-12" method="GET" action="{{ url_for('signin') }}">
+            <div class="card-panel">
+                <!-- username here  -->
+                <div class="row name">
+                    <div class="input-field col-md-12">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="username" name="username" minlength="4"
+                        maxlength="20" class="validate" placeholder="User Name" required>
+                        <label for="username"></label>
+                    </div>
+                </div>
+                <!-- password field -->
+                <div class="row">
+                    <div class="input-field password col-md-12">
+                        <i class="fas fa-unlock-alt"></i>
+                        <input type="password" id="password" name="password" minlength="4"
+                        maxlength="20" class="validate" placeholder="Password" required>
+                        <label for="password"></label>
+                    </div>
+                </div>
+                <!-- signup button -->
+                <div class="row">
+                    <button class="signup-btn" type="submit">
+                        Sign In
+                    </button>
                 </div>
             </div>
-            <!-- password field -->
-            <div class="row">
-                <div class="input-field col-md-12">
-                    <input type="password" id="password" name="password" minlength="4"
-                    maxlength="20" class="validate" placeholder="Password" required>
-                    <label for="password"></label>
-                </div>
-            </div>
-            <!-- signup button -->
-            <div class="row">
-                <button class="signup-btn" type="submit">
-                    Sign In
-                </button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
-
 {% endblock %}

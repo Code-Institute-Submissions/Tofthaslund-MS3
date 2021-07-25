@@ -1,37 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="signup-header">Sign Up</h3>
-<div class="row">
-    <form class="col-md-12 col-sm-12" method="POST" action="{{ url_for('register') }}">
-        <div class="card-panel">
-            <!-- username here  -->
-            <div class="row name">
-                <div class="input-field col-md-12">
-                    <input type="text" id="username" name="username" minlength="4"
-                    maxlength="20" class="validate" placeholder="User Name" required>
-                    <label for="username"></label>
+<div class="register-main">
+    <h3 class="signup-header">Sign Up</h3>
+    <div class="row">
+        <form class="col-md-12 col-sm-12" method="POST" action="{{ url_for('register') }}">
+            <div class="card-panel">
+                <!-- username here  -->
+                <div class="row name">
+                    <div class="input-field col-md-12">
+                        <i class="fas fa-user-plus"></i>
+                        <input type="text" id="username" name="username" minlength="4"
+                        maxlength="20" class="validate" placeholder="User Name" required>
+                        <label for="username"></label>
+                    </div>
+                </div>
+                <!-- password field -->
+                <div class="row password">
+                    <div class="input-field col-md-12">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" minlength="4"
+                        maxlength="20" class="validate" placeholder="Password" required>
+                        <label for="password"></label>
+                    </div>
+                </div>
+                <!-- signup button -->
+                <div class="row">
+                    <button class="signup-btn" type="submit">
+                        Sign Up
+                    </button>
+                </div>
+                <div class="row already-acc">
+                    <h6>Already have an <a href="{{ url_for('signin') }}">Account?</a></h6>
                 </div>
             </div>
-            <!-- password field -->
-            <div class="row">
-                <div class="input-field col-md-12">
-                    <input type="password" id="password" name="password" minlength="4"
-                    maxlength="20" class="validate" placeholder="Password" required>
-                    <label for="password"></label>
-                </div>
-            </div>
-            <!-- signup button -->
-            <div class="row">
-                <button class="signup-btn" type="submit">
-                    Sign Up
-                </button>
-            </div>
-            <div class="row already-acc">
-                <h6>Already have an <a href="{{ url_for('signin') }}">Account?</a></h6>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
+
 
 {% endblock %}

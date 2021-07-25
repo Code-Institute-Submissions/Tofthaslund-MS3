@@ -26,6 +26,7 @@ def index():
     return render_template("index.html", tasks=tasks)
 
 
+# Register for website 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -47,10 +48,10 @@ def register():
         session["user"] = request.form.get("username").lower()
         flash("Sign Up complete!")
         return redirect(url_for("profile", username=session["user"]))
-        
+
     return render_template("register.html")
 
-
+# Sign In when you have made an account 
 @app.route("/signin", methods=["GET", "POST"])
 def signin():
     if request.method == "POST":
