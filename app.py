@@ -22,8 +22,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/index")
 def index():
-    tasks = mongo.db.tasks.find()
-    return render_template("index.html", tasks=tasks)
+    return render_template("index.html")
 
 
 # Register for website 
@@ -87,6 +86,14 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
     
+    return redirect(url_for("signin"))
+
+
+@app.route("/logout")
+def logout():
+    # removing user from session cookies
+    flash("You have logged out")
+    session.pop("user")
     return redirect(url_for("signin"))
 
 
