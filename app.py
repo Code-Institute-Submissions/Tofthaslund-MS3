@@ -103,6 +103,11 @@ def tasks():
     return render_template("tasks.html", tasks=tasks)
 
 
+@app.route("/add_task")
+def add_task():
+    return render_template("add_task.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port = int(os.environ.get("PORT")),

@@ -4,7 +4,7 @@
 <h3>All Tasks</h3>
     {% for task in tasks%}
     <p>
-        <a class="btn btn-primary" data-bs-toggle="collapse" 
+        <a class="btn btn-danger" data-bs-toggle="collapse" 
         href="#collapseExample" role="button" aria-expanded="false" 
         aria-controls="collapseExample">
         <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
@@ -12,8 +12,8 @@
     </p>
     <div class="collapse" id="collapseExample">
         <div class="card card-body">
-        <strong>{{ task.category_name }}</strong>
-        <p>{{ task.task_description }}</p>
+        <strong>Category: {{ task.category_name }}</strong>
+        <p>Description: {{ task.task_description }}</p>
         <p><strong>Created by: {{ task.created_by }}</strong></p>
         </div>
     </div>

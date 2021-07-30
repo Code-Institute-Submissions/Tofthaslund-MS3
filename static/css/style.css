@@ -201,6 +201,13 @@ button.signup-btn:hover{
     align-items: center;
 }
 
+
+/* Add task */
+
+.add-task{
+    text-align: center;
+}
+
 /* footer */
 
 footer{

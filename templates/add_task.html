@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-justify text-center">Add Task</h3>
+
+<form class="col-md-6 card" method="POST" action="">
+    <div class="form-group">
+      <label for="task_name"></label>
+      <input type="text" class="form-control" 
+        id="task_name" name="task_name" minlength="5" 
+        maxlength="15" placeholder="Task Name" required>
+    </div>
+     
+    <div class="form-group">
+        <textarea class="form-control"
+         placeholder="Task Description" name="task_description"
+         id="task_description"
+         maxlength="150"></textarea>
+        <label for="task_description"></label>
+    </div>
+
+    <div class="form-group">
+        <label for="due_date">Due Date</label>
+        <input type="date" class="datepicker" 
+          id="due_date" name="due_date"required>
+      </div>
+
+  </form>
+
+{% endblock %}
