@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="text-justify text-center">Add Task</h3>
+<h3 class="text-justify text-center ">Add Task</h3>
 
-<form class="col-md-6" method="POST" action="">
-    <!-- datepicker -->
+<form class="col-md-6" method="POST" action="{{ url_for('add_task') }}">
+    <!-- pick category -->
     <div class="row col-md-8">
         <select id="category_name" name="category_name" 
             class="form-select" aria-label="Default select example" required>
@@ -16,14 +16,14 @@
           </select>
           <label for="category_name"></label>
     </div>
-
+    <!-- task name -->
     <div class="form-group">
       <label for="task_name"></label>
       <input type="text" class="form-control" 
         id="task_name" name="task_name" minlength="5" 
         maxlength="15" placeholder="Task Name" required>
     </div>
-     
+     <!-- task description -->
     <div class="form-group">
         <textarea class="form-control"
          placeholder="Task Description" name="task_description"
@@ -31,13 +31,15 @@
          maxlength="150"></textarea>
         <label for="task_description"></label>
     </div>
-
+    <!-- due date -->
     <div class="form-group">
         <label for="due_date">Due Date</label>
         <input type="date" class="datepicker" 
           id="due_date" name="due_date"required>
       </div>
 
+      <!-- submit button -->
+    <button type="submit" class="btn btn-success">Submit Task</button>
 
   </form>
 
