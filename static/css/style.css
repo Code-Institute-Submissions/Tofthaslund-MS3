@@ -202,6 +202,16 @@ button.signup-btn:hover{
 }
 
 
+/* tasks */
+
+.btn-sm{
+    margin: 2%;
+}
+
+.card-body{
+    margin-bottom: 3%;
+}
+
 /* Add task */
 
 .add-task{

@@ -11,8 +11,15 @@
         </a>
     </p>
     <div class="collapse" id="collapseExample">
+        <div class="col-sm-3">
+            <i class="fas fa-caret-down"></i>
+            <a href="" class="btn btn-success btn-sm">Done</a>
+            <a href="" class="btn btn-warning btn-sm">Edit</a>
+        </div>
+        <div class="col-sm-9">
+            <strong>Category: {{ task.category_name }}</strong>
+        </div>
         <div class="card card-body">
-        <strong>Category: {{ task.category_name }}</strong>
         <p>Description: {{ task.task_description }}</p>
         <p><strong>Created by: {{ task.created_by }}</strong></p>
         </div>
