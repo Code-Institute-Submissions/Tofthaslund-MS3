@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-justify text-center ">Edit Category</h3>
+
+<form class="col-md-6" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
+
+    <!-- category name -->
+    <div class="form-group">
+      <label for="task_name"></label>
+      <input type="text" class="form-control" 
+        id="category_name" name="category_name" minlength="3" 
+        maxlength="15" value="{{ category.category_name }}" placeholder="Category Name" required>
+    </div>
+      <!-- submit button -->
+      <a href="{{ url_for('get_categories') }}" class="btn btn-danger">
+        Cancel
+      </a>
+    <button type="submit" class="btn btn-success">Edit Category</button>
+
+  </form>
+
+{% endblock %}
