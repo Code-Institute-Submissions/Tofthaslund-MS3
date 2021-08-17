@@ -4,25 +4,28 @@
 <h3>All Tasks</h3>
     {% for task in tasks%}
     <p>
+        {% if session.user|lower == task.created_by|lower %}
         <a class="btn btn-danger" data-bs-toggle="collapse" 
         href="#collapseExample" role="button" aria-expanded="false" 
         aria-controls="collapseExample">
         <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
         </a>
+        {% endif %}
     </p>
-    <div class="collapse" id="collapseExample">
-        <div class="col-sm-3">
-            <i class="fas fa-caret-down"></i>
-            <a href="" class="btn btn-success btn-sm">Done</a>
-            <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn btn-warning btn-sm">Edit</a>
+    {% if session.user|lower == task.created_by|lower %}
+        <div class="collapse" id="collapseExample">
+            <div class="col-sm-3">
+                <a href="" class="btn btn-success btn-sm">Done</a>
+                <a href="{{ url_for('edit_task', task_id=task._id) }}" class="btn btn-warning btn-sm">Edit</a>
+            </div>
+            <div class="col-sm-9">
+                <strong>Category: {{ task.category_name }}</strong>
+            </div>
+            <div class="card card-body">
+            <p>Description: {{ task.task_description }}</p>
+            <p><strong>Created by: {{ task.created_by }}</strong></p>
+            </div>
         </div>
-        <div class="col-sm-9">
-            <strong>Category: {{ task.category_name }}</strong>
-        </div>
-        <div class="card card-body">
-        <p>Description: {{ task.task_description }}</p>
-        <p><strong>Created by: {{ task.created_by }}</strong></p>
-        </div>
-    </div>
+    {% endif %}
     {% endfor %}
 {% endblock %}
