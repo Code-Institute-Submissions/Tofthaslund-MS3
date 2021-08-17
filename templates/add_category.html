@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="text-justify text-center ">Add Category</h3>
+
+<form class="col-md-6" method="POST" action="{{ url_for('add_category') }}">
+
+    <!-- category name -->
+    <div class="form-group">
+      <label for="task_name"></label>
+      <input type="text" class="form-control" 
+        id="category_name" name="category_name" minlength="3" 
+        maxlength="15" placeholder="Category Name" required>
+    </div>
+      <!-- submit button -->
+    <button type="submit" class="btn btn-success">Add Category</button>
+
+  </form>
+
+{% endblock %}
