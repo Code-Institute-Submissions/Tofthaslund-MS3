@@ -64,7 +64,7 @@ def signin():
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome {}".format(request.form.get("username")))
-                    return redirect(url_for("profile", username=session["user"])) 
+                    return redirect(url_for("tasks", username=session["user"])) 
             else:
                 # incorrect password
                 flash("Incorrect Username and/or Password")
