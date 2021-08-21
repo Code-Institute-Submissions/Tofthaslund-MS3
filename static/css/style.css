@@ -5,6 +5,7 @@
     text-transform: capitalize;   
 }
 
+
 .flashes h4 {
     line-height: 2;
 }
@@ -18,6 +19,7 @@
 main{
     background-color: #efefef;
     color: #a9a9a9;
+    min-height: 80vh;
 }
 
 img{
@@ -214,8 +216,9 @@ button.signup-btn:hover{
 
 /* Add task */
 
-.add-task{
+#category_name{
     text-align: center;
+    align-items: center;
 }
 
 /* Category */
@@ -223,20 +226,21 @@ button.signup-btn:hover{
 .cat-body{
     margin-bottom: 5%;
     text-decoration: none;
-    border: blue 2px solid;
+    
     display: inline-block;
     width: 100%;
     height: 20rem;
 }
 
 .cat-div{
-    border: green 2px solid;
+    background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     margin-left: 2%;
     margin-bottom: 1%;
     height: 25%;
     width: 20%;
     text-align: center;
+    border-radius: 4%;
 }
 
 /* footer */
